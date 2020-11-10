@@ -21,6 +21,11 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    public function showLoginForm()
+    {
+        return view('auth.mylogin');
+    }
+
     /**
      * Where to redirect users after login.
      *
@@ -37,4 +42,5 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+   
 }
